@@ -83,8 +83,8 @@ class Estudante extends Pessoa {
 class OutrosFuncionarios extends Funcionario {
   private String[] funcao;
 
-  public OutrosFuncionarios(String[] funcao, String vinculo, int horasSemanais) {
-    super(vinculo, horasSemanais);
+  public OutrosFuncionarios(String[] funcao, String vinculo, int horasSemanais, int CPF) {
+    super(vinculo, horasSemanais, CPF, horasSemanais, vinculo);
     this.funcao = funcao;
   }
 
@@ -94,8 +94,8 @@ class Professor extends Funcionario {
   String[] disciplinas;
   int totalDisciplinas;
 
-  public Professor(String[] disciplinas, int totalDisciplinas, String vinculo, int horasSemanais){
-    super(vinculo, horasSemanais);
+  public Professor(String[] disciplinas, int totalDisciplinas, String vinculo, int horasSemanais,int CPF){
+    super(vinculo, horasSemanais, CPF, horasSemanais, vinculo);
     this.disciplinas = disciplinas;
     this.totalDisciplinas = totalDisciplinas;
 
